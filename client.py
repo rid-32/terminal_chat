@@ -2,14 +2,14 @@ import sys
 import socket
 import select
 
+if len(sys.argv) != 3:
+    print('Usage: [script] [server IP adress] [server port number]')
+    exit()
+
 try:
     name = str(input('Name: '))
 except:
     print('\n[ Goodbye ]')
-    exit()
-
-if len(sys.argv) != 3:
-    print('Usage: [script] [server IP adress] [server port number]')
     exit()
 
 host = str(sys.argv[1])
